@@ -1,42 +1,46 @@
-
+//Cleaning code exercise 2
+//Code purpose: Calculates how many numbers of 1, 2, 3 or more digits are 
+//entered by the user until he/she types “end”
 
 using System;
 
-class digits
+class Digits
 {
     static void Main()
     {
+        string input;
+        int inputConverted;
         int oneDigitCounter = 0, twoDigitsCounter = 0, threeDigitsCounter = 0;
         int moreDigitsCounter = 0;
         
         Console.Write("Insert a number: ");
-        string input = Console.ReadLine();
+        input = Console.ReadLine();
         
         while( input != "end" )
         {
-            int inputConverted = Convert.ToInt32(input);
+            inputConverted = Convert.ToInt32(input);
             
             if(inputConverted != 0)
             {
                 if( inputConverted / 10 == 0 )
                 {
-                    oneDigitCounter ++;  // it only has one digit
+                    oneDigitCounter ++;
                 }
                 else 
                 {
                     if ( inputConverted / 100 == 0 )
                     {
-                        twoDigitsCounter ++;  // the number has 2 digits
+                        twoDigitsCounter ++;
                     }
                     else
                     {
                         if ( inputConverted / 1000 == 0 )
                         {
-                            threeDigitsCounter ++;  // the number has 3 digits
+                            threeDigitsCounter ++;
                         }
                         else
                         {
-                            moreDigitsCounter++;  // the number has more than 3 digits
+                            moreDigitsCounter++;
                         }
                     }
                 }
